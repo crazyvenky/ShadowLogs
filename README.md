@@ -22,6 +22,14 @@ ShadowLogs is a lightweight background session recorder for the terminal. It cre
    ```
 3. Restart your terminal.
 
+### Permission Error
+If you encounter a "Permission denied" error when trying to run the scripts, execute the following command in your terminal to make them executable:
+
+```bash
+chmod +x install.sh uninstall.sh setup_logic.sh
+```
+
+
 ## Uninstallation
 If you wish to remove ShadowLogs, run:
 ```bash
