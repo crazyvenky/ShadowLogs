@@ -2,15 +2,18 @@
 echo "Uninstalling ShadowLog..."
 
 if [ -f ~/.shadowlog_logic ]; then
-    rm ~/.shadowlog_logic
-    echo "Removed: ~/.shadowlog_logic"
+rm ~/.shadowlog_logic
+echo "Removed: ~/.shadowlog_logic"
 fi
 
 if [ -f ~/.bashrc ]; then
-    cp ~/.bashrc ~/.bashrc.backup
+cp ~/.bashrc ~/.bashrc.backup
 
-    grep -v "source ~/.shadowlog_logic" ~/.bashrc > ~/.bashrc.tmp && mv ~/.bashrc.tmp ~/.bashrc
-    echo "Cleaned: ~/.bashrc (Backup created at ~/.bashrc.backup)"
+```
+grep -vF "source ~/.shadowlog_logic" ~/.bashrc > ~/.bashrc.tmp && mv ~/.bashrc.tmp ~/.bashrc
+echo "Cleaned: ~/.bashrc (Backup created at ~/.bashrc.backup)"
+```
+
 fi
 
 echo "------------------------------------------------"
