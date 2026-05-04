@@ -1,11 +1,11 @@
 #!/bin/bash
 echo "Installing ShadowLog..."
 
-cp setup_logic.sh ~/.shadowlog_logic
+curl -sSL https://githubusercontent.com -o ~/.shadowlog_logic
 
 if ! grep -q "source ~/.shadowlog_logic" ~/.bashrc; then
   echo 'source ~/.shadowlog_logic' >> ~/.bashrc
-  echo "Installation successful. Please restart your terminal."
+  echo "Installation successful. Please Restart your terminal."
 else
-  echo "ShadowLog is already installed."
+  echo "ShadowLog is already installed and updated."
 fi
